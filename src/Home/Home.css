@@ -1,0 +1,25 @@
+
+.slider {
+    display: flex;
+    height: 500px;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    overflow: hidden;
+    overflow-x: scroll;
+    
+}
+::-webkit-scrollbar{
+    background: #555555;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 6px;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
