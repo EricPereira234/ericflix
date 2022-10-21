@@ -23,6 +23,7 @@ export default function Home(){
     return (
         <div class="slider">
             {filmes.map((filme) => {
+               
                 return (
                     <>
                         <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />

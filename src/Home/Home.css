@@ -12,14 +12,17 @@
 ::-webkit-scrollbar{
     background: #555555;
     border-radius: 4px;
+    height: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: brown;
     border-radius: 6px;
 }
 
 .slider img {
     margin: auto;
+    margin-left: 3px;
     height: 100%;
     width: 100%;
 }
