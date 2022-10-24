@@ -5,7 +5,7 @@ export default function Header(){
     return (
         <header>
             EricfliX
-            <Link to={'/'} >Entrar</Link>
+            <Link to={'/login'} >Entrar</Link>
         </header>
     )
 }

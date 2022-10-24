@@ -8,7 +8,7 @@ export default function Home(){
 
     useEffect(()=>{
         async function loadFilmes(){
-            const response = await api.get("movie/now_playing", {
+            const response = await api.get("/movie/popular", {
                 params:{
                     api_key: "28fc232cc001c31e8a031f419d0a14ca",
                     language: "pt-BR",
