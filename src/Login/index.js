@@ -1,11 +1,37 @@
+import "./Login.css";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 
+export default function Logar() {
+    const navigate = useNavigate();
+    const [imputemail, setImputEmais] = useState('');
+    const [imputSenha, setImputSenha] = useState('');
 
-export default function Logar(){
-    return(
-        <div>
-            <input type={"text"} placeholder="exemple@.com"/>
-            <input type={"password"} />
-            <button>Entrar</button>
+    let email = "ericflix";
+    let senha = 123;
+    function Login() {
+        if (email == imputemail && senha == imputSenha) {
+            navigate("/filme");
+        
+        }else{
+            alert("email e senha invjálida !");
+            navigate("/login");
+        }
+        
+    }
+    return (
+        <div className="container">
+            <label>Login</label>
+            <input type={"text"} placeholder="exemple@.com" 
+             value={imputemail}
+             onChange={(e)=>setImputEmais(e.target.value)}
+            />
+            <input type={"password"} 
+                value={imputSenha}
+                onChange={(e)=>setImputSenha(e.target.value)}
+            />
+            <button onClick={Login} >Entrar</button>
+            <a href="/login" >esqueceu sua senha ?</a>
         </div>
     )
 }
