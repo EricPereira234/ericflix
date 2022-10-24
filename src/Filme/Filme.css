@@ -1,0 +1,14 @@
+
+.destaque{
+    width: 80%;
+    height: 350px;
+    margin: auto;
+    margin-top: 10px;
+  
+   
+}
+.destaque img {
+    width: 70%;
+    height: 350px;
+    float:right
+}
