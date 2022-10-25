@@ -1,14 +1,42 @@
-
-.destaque{
+.destaque {
     width: 80%;
     height: 350px;
     margin: auto;
     margin-top: 10px;
-  
-   
+    overflow-y: hidden;
 }
+
 .destaque img {
-    width: 70%;
-    height: 350px;
-    float:right
+    float: right;
+    width: 80%;
 }
+
+.destaque h2 {
+    float: left;
+    padding-left: 5%;
+    color: brown;
+}
+
+.destaque p {
+    float: left;
+    padding-left: 5%;
+    margin-top: -10px;
+    font-size: 12px;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+.legenda {
+    float: left;
+    width: 30%;
+    position: absolute;
+    height: 350px;
+    margin: 0;
+    
+}
+.legenda .branco {
+    background-image: linear-gradient(to right, #000 40%,rgba(255,255,255,0) 100%);
+    width: 200%;
+    height: 100%;
+    z-index: 1000;
+  }

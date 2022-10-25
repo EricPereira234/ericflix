@@ -25,7 +25,16 @@ export default function Filme() {
             {filmes.map((filme) => {
                
                return (
+                <>
+                <div className="legenda" >
+                    <h2>{filme.title}</h2>
+                    <p>{filme.overview}</p>
+                    <p>Avalição: {filme.vote_average}</p>
+                    <div class="branco"></div>
+                </div>
+                
                <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
+               </>
                );
             }
             )}
