@@ -1,10 +1,13 @@
 import "./Filme.css";
 import api from "../services/api";
 import { useEffect, useState } from 'react';
+import { HiArrowLeft } from "react-icons/hi";
+import { HiArrowRight } from "react-icons/hi";
 
 export default function Filme() {
     const [filmes, setFilmes] = useState([]);
     const [lancamento, setLancamento] = useState([]);
+    const [scroll, setScroll] = useState(-400);
 
     useEffect(() => {
         async function loadFilmes() {
@@ -39,6 +42,22 @@ export default function Filme() {
 
     }, [])
 
+    //funções para setas
+    function left(){
+        let numero = scroll+30;
+        if (numero < 0 ){
+            setScroll(numero);
+        }
+         
+    }
+    function rigth(){
+        let numero = scroll-30;
+        if (numero > -999 ){
+            setScroll(numero);
+        }
+         
+    }
+
     return (
         <>
             <div className="destaque" >
@@ -60,10 +79,17 @@ export default function Filme() {
                 )}
             </div>
 
-        
+
+
+
             <h3>Lançamentos</h3>
-            <div className="area-filme">
-                <div className="area-filme-item" >
+            <div className="caixaSeta">
+                <HiArrowLeft onClick={left} className="seta" />
+                <HiArrowRight onClick={rigth}  className="seta" />
+            </div>
+
+            <div className="area-filme" >
+                <div className="area-filme-item" style={{ marginLeft: scroll }} >
                     {lancamento.map((lancamentos) => {
                         return (
                             <img src={`https://image.tmdb.org/t/p/original/${lancamentos.poster_path}`} alt={lancamento.title} />
