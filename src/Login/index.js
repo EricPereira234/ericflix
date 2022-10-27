@@ -1,6 +1,7 @@
 import "./Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import {  toast } from 'react-toastify';
 
 export default function Logar() {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function Logar() {
             navigate("/filme");
         
         }else{
-            alert("email e senha invjálida !");
+            toast.error("email e senha invjálida !");
             navigate("/login");
         }
         
