@@ -85,6 +85,12 @@
     color: brown;
 }
 
+h3{
+    margin-left: 5%;
+    margin-top: 30px;
+    margin-bottom: -5px;
+}
+
 
 /** tela menor **/
 @media screen and (max-width: 768px) {
