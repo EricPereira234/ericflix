@@ -18,7 +18,7 @@ export default function Filme() {
 
     useEffect(() => {
         async function loadFilmes() {
-            const response = await api.get("/movie/now_playing", {
+            const response = await api.get("/movie/now_playing?", {
                 params: {
                     api_key: "bf344bc0dfdbd5db737382942ea970bf",
                     language: "pt-BR",
@@ -154,6 +154,9 @@ export default function Filme() {
                                 <h2>{filme.title}</h2>
                                 <p>{filme.overview}</p>
                                 <p>Avalição: {filme.vote_average}</p>
+                                <a target="_blank" href={`https://youtube.com/results?search_query=${filme.title}`}>
+                                    Trailer
+                                </a>
                                 <div class="branco"></div>
                             </div>
 
