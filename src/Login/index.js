@@ -7,7 +7,8 @@ export default function Logar() {
     const navigate = useNavigate();
     const [imputemail, setImputEmais] = useState('');
     const [imputSenha, setImputSenha] = useState('');
-
+     
+    //variáveis que recebem dados do login
     let email = "ericflix";
     let senha = 123;
     function Login() {

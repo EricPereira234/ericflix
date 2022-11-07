@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import './Header.css';
 
-export default function Header(props) {
+export default function Header() {
     const [button, setButton] = useState();
     const [link, setLink] = useState();
 
